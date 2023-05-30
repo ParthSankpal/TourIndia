@@ -1,15 +1,21 @@
 import React from 'react';
 import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import Rajasthan from '../assets/Rajasthan.png';
+import Kerla from '../assets/Kerla.png';
+import TajMahal2 from '../assets/TajMahal2.png';
+import riversunset from '../assets/riversunset.png';
+import Mountains from '../assets/Mountains.png';
+
 import { BsChevronRight } from "react-icons/bs";
 
 const Main = () => {
 
     const cardData=[
         {id:1, image:[Rajasthan],location:"rajasthan", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
-        {id:1, image:[Rajasthan],location:"rajasthan", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
-        {id:1, image:[Rajasthan],location:"rajasthan", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
-        {id:1, image:[Rajasthan],location:"rajasthan", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"}
+        {id:1, image:[Kerla],location:"Kerla", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
+        {id:1, image:[TajMahal2],location:"Delhi", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
+        {id:1, image:[riversunset],location:"Andhra", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
+        {id:1, image:[Mountains],location:"Sahiyadri", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"}
 
     ]
   return (
@@ -29,7 +35,7 @@ const Main = () => {
         <div className='grid grid-cols-1  gap-14 lg:grid-cols-4'>
             
                 {cardData.map((cardData)=>(
-                    <div key={cardData.id} className='rounded-2xl flex flex-col h-96 shadow-lg hover:shadow-2xl '>
+                    <div key={cardData.id} className='rounded-2xl overflow-auto flex flex-col h-96 shadow-lg hover:shadow-2xl '>
                         <div>
                             <img src={cardData.image} alt='Rajasthan' className='rounded-lg'/>
                         </div>
@@ -68,8 +74,13 @@ const Main = () => {
             
         </div>
     </div>
-        <section>
-
+        <section className='m-24 flex'>
+            <div className='w-28'>
+                Hi
+            </div>
+            <div>
+                Namskar
+            </div>
         </section>
 
     </section>
