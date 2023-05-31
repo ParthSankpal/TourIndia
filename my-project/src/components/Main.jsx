@@ -5,6 +5,7 @@ import Kerla from '../assets/Kerla.png';
 import TajMahal2 from '../assets/TajMahal2.png';
 import riversunset from '../assets/riversunset.png';
 import Mountains from '../assets/Mountains.png';
+import pattern from '../assets/pattern.png';
 
 import { BsChevronRight } from "react-icons/bs";
 
@@ -12,15 +13,16 @@ const Main = () => {
 
     const cardData=[
         {id:1, image:[Rajasthan],location:"rajasthan", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
-        {id:1, image:[Kerla],location:"Kerla", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
-        {id:1, image:[TajMahal2],location:"Delhi", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
+        {id:1, image:[Kerla],location:"Kerla", discription:" Kerala: God's Own Country", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
+        {id:1, image:[TajMahal2],location:"Delhi", discription:"Taj Mahal: A love story set in stone.", cost:"INR 15000" },
         {id:1, image:[riversunset],location:"Andhra", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
-        {id:1, image:[Mountains],location:"Sahiyadri", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"}
+        {id:1, image:[Mountains],location:"Maharahtra", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"},
+        {id:1, image:[Mountains],location:"Maharahtra", discription:"Rajasthan VIP Tour: Desert Safari & Day Trip", cost:"INR 15000",mrp:"INR 20000" ,discount:"25%"}
 
     ]
   return (
     <>
-    <section className='pb-5'>
+    <section className=''>
     <header>
         <div className='mx-28 my-16 text-[#374772] justify-between flex'>
             <h2 className='font-El_Messiri text-4xl'>
@@ -32,7 +34,7 @@ const Main = () => {
         </div>
     </header>
     <div className='mx-24 '>
-        <div className='grid grid-cols-1  gap-14 lg:grid-cols-4'>
+        <div className='grid grid-cols-1 gap-14 lg:grid-cols-4'>
             
                 {cardData.map((cardData)=>(
                     <div key={cardData.id} className='rounded-2xl overflow-auto flex flex-col h-96 shadow-lg hover:shadow-2xl '>
@@ -44,7 +46,7 @@ const Main = () => {
                                 <div className='font-Merienda text-[#68696c84] text-xs pb-2 text-opacity-10 '>
                                     {cardData.location}
                                 </div>
-                                <div className='text-[#374772] text-md font-bold font-Merienda'>
+                                <div className='text-[#374772] text-md h-11 font-bold font-Merienda'>
                                     {cardData.discription}
                                 </div>
                                 <div className=' text-[#374772bd] text-sm pt-4 font-Merienda '>
@@ -55,12 +57,16 @@ const Main = () => {
                                 <div className='w-2/5 text-[#374772] text-sm '>
                                     {cardData.cost}
                                 </div>
-                                <span className='line-through text-[#374772] text-sm '>
-                                    {cardData.mrp}
-                                </span>
-                                <span className='text-white text-center text-xs w-8 h-4 text-[#ffffff] rounded-md bg-regal-blue ml-2'>
-                                    {cardData.discount}
-                                </span>
+                                {cardData.mrp? (
+                                    <span className='line-through text-[#3747724c] text-sm '>
+                                        {cardData.mrp}
+                                    </span>
+                                ): null}
+                                {cardData.discount ? (
+                                    <span className='text-white text-center text-xs w-8 h-4 text-[#ffffff] rounded-md bg-regal-blue ml-2'>
+                                        {cardData.discount}
+                                    </span>
+                                ):null}
                             </div>
                             <div className='text-[#374772] flex mt-4 border-t pt-3 mx-8 text-justify justify-between'>
                                 <span >Book Now</span>
@@ -74,12 +80,24 @@ const Main = () => {
             
         </div>
     </div>
-        <section className='m-24 flex'>
-            <div className='w-28'>
-                Hi
+        <section className='m-24 h-56 bg-[#046a76] rounded-2xl flex'>
+            <div className='w-24  '>
+                <img src={pattern} className='h-full rounded-l-2xl' alt='apttern' />
             </div>
-            <div>
-                Namskar
+            <div className='w-full  justify-between  items-center text-justify  flex m-16 '>
+                <div className='text-[#fffff3]'>
+                    <div className='font-Merienda '>
+                        For Unique Travel Experience
+                    </div>
+                    <div className='font-Merienda text-2xl'>
+                        Explore our Exclusive Offers
+                    </div>
+                </div>
+                <div className=''>
+                    <Link to="/visaapplication" className='text-[#046a76] font-inner font-Merienda font-medium bg-[#fffff3] text-white px-4 py-2 rounded-full'>
+                        Check Now
+                    </Link>
+                </div>
             </div>
         </section>
 
