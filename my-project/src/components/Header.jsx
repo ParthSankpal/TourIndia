@@ -15,8 +15,8 @@ const Header = () => {
   return (
     <>
  
-    <div className='bg-cover bg-center w-full h-5/6' style={{ backgroundImage: `url(${lady})`, backgroundSize: '1920px 1920px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', }}>
-          <div class='flex w-full h-5/6  text-[#374772]  gap-24 mx-24 px-11 py-44 object-cove'>
+    <div className='bg-cover   h-5/6' style={{ backgroundImage: `url(${lady})`, backgroundSize: '1920px 1920px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', }}>
+          <div class='flex  h-5/6  text-[#374772]  gap-24 mx-24 px-11 py-44 object-cove'>
             <div class="w-1/3 pt-24 ">
               <div class='font-Merienda text-5xl'>
                 Rethink Summer
