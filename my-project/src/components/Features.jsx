@@ -15,7 +15,13 @@ import { Link } from "react-router-dom";
 
 const Features = () => {
 
-  const [currentIndex, setCurrentIndex] = useState(1)
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [secondIndex, setSecondIndex] = useState(0);
+  const postImg=()=>{
+    const isFirseIndex = currentIndex===0;
+    const newIndex= isFirseIndex? secondIndex: currentIndex;
+    setCurrentIndex(newIndex)
+  }
   return (
     <>
       <section
@@ -58,7 +64,7 @@ const Features = () => {
           <div className="w-70  relative left-[1080px]  flex pr-3  ">
             <div className="h-44">
               <div>
-                <BsChevronRight />
+                <BsChevronRight onClick={postImg}/>
               </div>
               <div>
                 <BsChevronLeft />
@@ -73,6 +79,10 @@ const Features = () => {
                 
                     <div
                   style={{backgroundImage:`url(${cardData[currentIndex].url})`}}
+                  className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl bg-cover duration-500 "
+                />
+                <div
+                  style={{backgroundImage:`url(${cardData[secondIndex].url})`}}
                   className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl bg-cover duration-500 "
                 />
                 
