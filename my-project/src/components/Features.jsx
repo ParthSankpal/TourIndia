@@ -1,32 +1,39 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Bartender from "../assets/bartender.jpg";
 import Shopping from "../assets/shopping.jpg";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
-const cardData=[
-    {url:[Bartender]},
-    {url:[Shopping]}
-]
-
-
+const cardData = [{ url: [Bartender] }, { url: [Shopping] }];
 
 import { Link } from "react-router-dom";
 
 const Features = () => {
 
-  const [currentIndex, setCurrentIndex] = useState(1);
-  const [secondIndex, setSecondIndex] = useState(0);
-  const postImg=()=>{
-    const isFirseIndex = currentIndex===0;
-    const newIndex= isFirseIndex? secondIndex: currentIndex;
-    setCurrentIndex(newIndex)
-  }
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [secCUrrentIndex, setSecCurrentIndex] = useState(1);
+  const previousImage = () => {
+    setCurrentIndex((prevIndex) =>
+      (prevIndex - 1 + cardData.length) % cardData.length
+    );
+    setSecCurrentIndex((prevIndex) =>
+      (prevIndex - 1 + cardData.length) % cardData.length
+    );
+    
+  };
+  const nextImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % cardData.length);
+    setSecCurrentIndex((prevIndex) => (prevIndex + 1) % cardData.length);
+
+  };
+
+  
+
   return (
     <>
       <section
         className="text-justify bg-cover bg-center font-Merienda pt-14 pb-14 text-[#fffff3]"
-        style={{ backgroundImage: `url(${Bartender})` }}
+        style={{ backgroundImage: `url(${cardData[secCUrrentIndex].url})` }}
       >
         <div className="overflow-hidden">
           <header className="text-4xl mx-36 pb-8 border-b-2">
@@ -61,35 +68,30 @@ const Features = () => {
               </div>
             </div>
           </div>
-          <div className="w-70  relative left-[1080px]  flex pr-3  ">
-            <div className="h-44">
-              <div>
-                <BsChevronRight onClick={postImg}/>
+          <div className="w-70 h-48 relative left-[1000px]   flex  gap-4">
+            <div className="text-5xl items-center grid py-6 justify-between rounded-full">
+              <div className="  bg-[#374772] text-white  rounded-full">
+                <BsChevronRight onClick={previousImage} />
               </div>
-              <div>
-                <BsChevronLeft />
+              <div className=" bg-[#374772] text-white  rounded-full">
+                <BsChevronLeft onClick={nextImage}  />
               </div>
             </div>
-            {/* <div className="flex relative ">
 
-            </div> */}
-            
-
-              <div className="flex space-x-4">
-                
-                    <div
-                  style={{backgroundImage:`url(${cardData[currentIndex].url})`}}
-                  className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl bg-cover duration-500 "
-                />
-                <div
-                  style={{backgroundImage:`url(${cardData[secondIndex].url})`}}
-                  className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl bg-cover duration-500 "
-                />
-                
-              </div>
-              
+            <div className="flex space-x-4">
+              <div
+                style={{
+                  backgroundImage: `url(${cardData[currentIndex].url})`,
+                }}
+                className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl bg-center bg-cover duration-500 "
+              />
+              <div
+                style={{ backgroundImage: `url(${cardData[secCUrrentIndex].url})` }}
+                className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl bg-center bg-cover duration-500 "
+              />
             </div>
           </div>
+        </div>
 
         <div className=" flex ml-56 over  "></div>
       </section>
@@ -99,10 +101,6 @@ const Features = () => {
 
 export default Features;
 
-
-
-
-
-
-
-{/* <div style={{backgroundImage:`url(${cardData[0].url})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"/> */}
+{
+  /* <div style={{backgroundImage:`url(${cardData[0].url})`}} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"/> */
+}
