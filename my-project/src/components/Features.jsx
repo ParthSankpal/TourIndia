@@ -93,15 +93,17 @@ const Features = () => {
                   <div
                     style={{
                       backgroundImage: `url(${cardData[currentIndex].url})`,
+                      transitionClass
                     }}
-                    className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl ${transitionClass} bg-center bg-cover transition-transform duration-500 transform translate-x-0 "
+                    className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl  bg-center bg-cover transition-transform duration-500 transform translate-x-0 "
                     onClick={previousImage}
                   />
                   <div
                     style={{
                       backgroundImage: `url(${cardData[secCUrrentIndex].url})`,
+                      transitionClass
                     }}
-                    className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl ${transitionClass} bg-center bg-cover transition-transform duration-500 transform translate-x-0 "
+                    className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl  bg-center bg-cover transition-transform duration-500 transform translate-x-0 "
                     onClick={nextImage}
                   />
                 </div>
