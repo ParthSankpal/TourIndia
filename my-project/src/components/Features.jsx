@@ -41,7 +41,7 @@ const Features = () => {
   return (
     <>
       <section
-        className="text-justify bg-cover bg-center font-Merienda pt-14 pb-14 text-[#fffff3]"
+        className="text-justify bg-cover bg-center font-Poppins pt-14 pb-14 text-[#fffff3]"
         style={{ backgroundImage: `url(${cardData[secCUrrentIndex].url})` }}
       >
         <div className="overflow-hidden">
@@ -72,7 +72,7 @@ const Features = () => {
                 <div className="  w-36">
                   <Link
                     to="/visaapplication"
-                    className="text-[#fffff3] items-center w-36  justify-between flex font-inner font-Merienda font-medium bg-[#374772] text-white px-4 py-2 rounded-full"
+                    className="text-[#fffff3] items-center w-36  justify-between flex font-inner font-Poppins font-medium bg-[#374772] text-white px-4 py-2 rounded-full"
                   >
                     Learn More
                     <BsChevronRight />

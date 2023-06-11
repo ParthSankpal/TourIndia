@@ -7,15 +7,22 @@ export default {
   theme: {
     fontFamily: {
       Poppins: ['sans-serif'],
-      Merienda:["cursive"],
       Tajawal: ["sans-serif"],
-      El_Messiri:["sans-serif"]
+      El_Messiri:["sans-serif"],
+      Lato:["sans-serif"]
       
     },
+    transitionDuration: {
+      '2000': '2000ms',
+      '1500': '1500ms',
+    },
+
     colors: {
       'regal-blue': '#374772',
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
 

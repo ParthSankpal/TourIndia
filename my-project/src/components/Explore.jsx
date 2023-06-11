@@ -31,7 +31,7 @@ const Explore = () => {
   ];
   return (
     <section className="mt-32 bg-[#fffff3] overflow-hidden">
-      <header className=" text-3xl py-8 text-justify px-32 font-Merienda text-[#374772]">
+      <header className=" text-3xl py-8 text-justify px-32 font-Poppins text-[#374772]">
         Explore Top Destinations
       </header>
       <main className="flex flex-col mx-18 justify-center ">
@@ -52,7 +52,7 @@ const Explore = () => {
                     />
                   </div>
                   <div className="my-2 flex  items-center mx-8 justify-between  ">
-                    <div className="font-Merienda text-[#68696c84] text-lg pb-2 text-opacity-10 ">
+                    <div className="font-Poppins text-[#68696c84] text-lg pb-2 text-opacity-10 ">
                       {cardData[0].location}
                     </div>
                     <span>
@@ -71,18 +71,18 @@ const Explore = () => {
       </main>
       <footer className="p-32 text-3xl flex  ">
         <sectoin className="text-justify">
-          <div className=" font-Merienda text-[#374772]">Know Before You Go</div>
+          <div className=" font-Poppins text-[#374772]">Know Before You Go</div>
           <div className="flex gap-10 mt-9">
           {infoData.map((infoData) => (
             <div className="flex gap-10 mt-9 ">
               <div className=" w-72 text-[#374772] shadow-lg rounded-2xl">
                 <img src={infoData.image} className="rounded-2xl" />
                 <div className="my-4 flex flex-col items-start mx-8">
-                  <div className="font-Merienda text-lg pb-20 text-opacity-10 ">
+                  <div className="font-Poppins text-lg pb-20 text-opacity-10 ">
                     {infoData.heading}
                   </div>
                   <div className="pt-2 text-[#374772] border-t w-full justify-between flex  items-center  ">
-                    <div className="font-Merienda  text-lg  text-opacity-10 ">
+                    <div className="font-Poppins  text-lg  text-opacity-10 ">
                       Know More
                     </div>
                     <span>
