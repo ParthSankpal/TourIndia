@@ -5,7 +5,6 @@ import Kerla from '../assets/Kerla.png';
 import TajMahal2 from '../assets/TajMahal2.png';
 import riversunset from '../assets/riversunset.png';
 import Mountains from '../assets/Mountains.png';
-import pattern from '../assets/pattern.png';
 
 import { BsChevronRight } from "react-icons/bs";
 
@@ -28,7 +27,7 @@ const Main = () => {
             <h2 className='font-El_Messiri text-4xl'>
                 What to Experience
             </h2>
-            <Link to="/visaapplication" class='text-[#374772] font-Poppins font-medium bg-transparent border border-[#374772]  px-4 py-2 rounded-full'>
+            <Link to="/visaapplication" class='text-[#374772]  font-medium bg-transparent border border-[#374772]  px-4 py-2 rounded-full'>
                 View more
             </Link>
         </div>
@@ -43,13 +42,13 @@ const Main = () => {
                         </div>
                         <div >
                             <div className='mt-5 mx-8 text-justify  '>
-                                <div className='font-Poppins text-[#68696c84] text-xs pb-2 text-opacity-10 '>
+                                <div className=' text-[#68696c84] text-xs pb-2 text-opacity-10 '>
                                     {cardData.location}
                                 </div>
-                                <div className='text-[#374772] text-md h-11 font-bold font-Poppins'>
+                                <div className='text-[#374772] text-md h-11 font-bold '>
                                     {cardData.discription}
                                 </div>
-                                <div className=' text-[#374772bd] text-sm pt-4 font-Poppins '>
+                                <div className=' text-[#374772bd] text-sm pt-4 s '>
                                     Starting from
                                 </div>
                             </div>
@@ -82,19 +81,19 @@ const Main = () => {
     </div>
         <section className='m-24 h-56 bg-[#046a76] rounded-2xl flex'>
             <div className='w-24  '>
-                <img src={pattern} className='h-full rounded-l-2xl' alt='apttern' />
+                <img src="" className='h-full rounded-l-2xl' alt='apttern' />
             </div>
             <div className='w-full  justify-between  items-center text-justify  flex m-16 '>
                 <div className='text-[#fffff3]'>
-                    <div className='font-Poppins '>
+                    <div className=' '>
                         For Unique Travel Experience
                     </div>
-                    <div className='font-Poppins text-2xl'>
+                    <div className=' text-2xl'>
                         Explore our Exclusive Offers
                     </div>
                 </div>
                 <div className=''>
-                    <Link to="/visaapplication" className='text-[#046a76] font-inner font-Poppins font-medium bg-[#fffff3] text-white px-4 py-2 rounded-full'>
+                    <Link to="/visaapplication" className='text-[#046a76] bg-[#fff]  font-medium  text-white px-4 py-2 rounded-full'>
                         Check Now
                     </Link>
                 </div>
@@ -116,13 +115,13 @@ export default Main
 //                     </div>
 //                     <div >
 //                         <div className='mt-5 mx-8 text-justify  '>
-//                             <div className='font-Poppins text-[#68696c84] text-xs pb-2 text-opacity-10 '>
+//                             <div className=' text-[#68696c84] text-xs pb-2 text-opacity-10 '>
 //                                 Rajasthan
 //                             </div>
-//                             <div className='text-[#374772] text-md font-bold font-Poppins'>
+//                             <div className='text-[#374772] text-md font-bold '>
 //                                 Rajasthan VIP Tour: Desert Safari & Day Trip
 //                             </div>
-//                             <div className=' text-[#374772bd] text-sm pt-4 font-Poppins '>
+//                             <div className=' text-[#374772bd] text-sm pt-4  '>
 //                                 Starting from
 //                             </div>
 //                         </div>

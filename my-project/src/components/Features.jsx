@@ -41,7 +41,7 @@ const Features = () => {
   return (
     <>
       <section
-        className="text-justify bg-cover bg-center font-Poppins pt-14 pb-14 text-[#fffff3]"
+        className="text-justify bg-cover bg-center  pt-14 pb-14 text-[#fffff3]"
         style={{ backgroundImage: `url(${cardData[secCUrrentIndex].url})` }}
       >
         <div className="overflow-hidden">
@@ -51,7 +51,7 @@ const Features = () => {
           <div className=" ">
             <div className=" relative  mt-42 ml-36">
               <div className=" cursor-pointer">
-                <div className="flex items-center pt-6 text-sm font-bold">
+                <div className="flex items-center pt-6 text-sm ">
                   <Link
                     to=""
                     className="rounded-full w-8 h-8 bg-[#eeeeee79] flex  items-center justify-center"
@@ -72,7 +72,7 @@ const Features = () => {
                 <div className="  w-36">
                   <Link
                     to="/visaapplication"
-                    className="text-[#fffff3] items-center w-36  justify-between flex font-inner font-Poppins font-medium bg-[#374772] text-white px-4 py-2 rounded-full"
+                    className="text-[#fffff3] items-center w-36  justify-between flex font-inner  font-medium bg-[#374772] text-white px-4 py-2 rounded-full"
                   >
                     Learn More
                     <BsChevronRight />
@@ -80,13 +80,13 @@ const Features = () => {
                 </div>
               </div>
               <div className=" absolute w-70 h-48 left-[65%] bottom-5  flex  gap-4">
-                <div className=" items-center grid py-6 justify-between rounded-full">
-                  <div className="  bg-[#374772] h-8 w-8 text-white  rounded-full">
+                <div className="flex flex-col py-6 gap-8 ">
+                  <button className=" flex justify-center items-center bg-[#374772] h-8 w-8 text-white  rounded-full">
                     <BsChevronRight onClick={previousImage} />
-                  </div>
-                  <div className=" bg-[#374772] h-8 w-8 text-white rounded-full">
+                  </button>
+                  <button className="flex justify-center items-center bg-[#374772] h-8 w-8 text-white rounded-full">
                     <BsChevronLeft onClick={nextImage} />
-                  </div>
+                  </button>
                 </div>
 
                 <div className="flex space-x-4">
