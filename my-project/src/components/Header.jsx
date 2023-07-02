@@ -42,41 +42,41 @@ const Header = () => {
   return (
     <>
     
-    <div className=''>
+    <div className=' pt-32'>
     <div className='bg-cover  h-5/6 bg-center' style={{ backgroundImage: `url(${cardData[currentIndex].img})`, backgroundSize: '1920px 1920px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backdrop_filter:' blur(20px)'}}>
-          <div class=' backdrop-blur-md '>
+          <div className=' backdrop-blur-md '>
             <div className='flex h-5/6 text-justify text-[#374772] justify-between px-52 pt-44 pb-28 object-cove'>
-            <div class=" pt-24 ">
-              <div class=' text-5xl '>
+            <div className=" pt-24 ">
+              <div className=' text-5xl '>
                 Rethink Summer
               </div>
-              <div class=' py-5 '>
+              <div className=' py-5 '>
                 Find your cooler getaway.
               </div>
-              <Link to="/visaapplication" class='text-[#374772]  font-medium bg-transparent border border-[#374772]  px-4 py-2 rounded-full'>
+              <Link to="/visaapplication" className='text-[#374772]  font-medium bg-transparent border border-[#374772]  px-4 py-2 rounded-full'>
                 learn more
               </Link>
             </div>
-            <div class=' justify-start items-center px-28 flex'>
-              <div class=' absolute inset-y-50 left-50  z-40'>
-                <button onClick={firstClick}><img src={cardData[currentIndex].img} alt='img' class='relative w-64  rounded-[24px]' /></button>
+            <div className=' justify-start items-center px-28 flex'>
+              <div className=' absolute inset-y-50 left-50  z-40'>
+                <button onClick={firstClick}><img src={cardData[currentIndex].img} alt='img' className='relative w-64  rounded-[24px]' /></button>
               </div>
-              <div class='  z-20 '>
-                <button onClick={secondClick}><img src={cardData[secondTopIndex].img} alt='img'  class='inset-y-50 w-56 left-48 relative rounded-[24px]' /></button>
+              <div className='  z-20 '>
+                <button onClick={secondClick}><img src={cardData[secondTopIndex].img} alt='img'  className='inset-y-50 w-56 left-48 relative rounded-[24px]' /></button>
               </div>
-              <div class='  z-0'>
-                <button onClick={thirdClick}><img src={cardData[thirdTop].img} alt='img'  class='inset-y-50 w-48 left-32 relative  rounded-[24px]' /></button>
+              <div className='  z-0'>
+                <button onClick={thirdClick}><img src={cardData[thirdTop].img} alt='img'  className='inset-y-50 w-48 left-32 relative  rounded-[24px]' /></button>
               </div>
             </div>
             </div>
             <div className='flex justify-center pb-8  text-[#374772] gap-4'>
-              <div class=' border-t-2 px-11 text-2xl'>
+              <div className=' border-t-2 px-11 text-2xl'>
                 Rethink Summer
               </div>
-              <div class=' border-t-2 px-11 text-2xl'>
+              <div className=' border-t-2 px-11 text-2xl'>
                 Rethink Summer
               </div>
-              <div class=' border-t-2 px-11 text-2xl'>
+              <div className=' border-t-2 px-11 text-2xl'>
                 Rethink Summer
               </div>
             </div>

@@ -27,7 +27,7 @@ const Main = () => {
             <h2 className='font-El_Messiri text-4xl'>
                 What to Experience
             </h2>
-            <Link to="/visaapplication" class='text-[#374772]  font-medium bg-transparent border border-[#374772]  px-4 py-2 rounded-full'>
+            <Link to="/visaapplication" className='text-[#374772]  font-medium bg-transparent border border-[#374772]  px-4 py-2 rounded-full'>
                 View more
             </Link>
         </div>

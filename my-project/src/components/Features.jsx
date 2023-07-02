@@ -22,7 +22,7 @@ import { Link } from "react-router-dom";
 const Features = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [secCUrrentIndex, setSecCurrentIndex] = useState(1);
-  const [transitionClass, setTransitionClass] = useState('');
+  const [transitionclassName, setTransitionclassName] = useState('');
 
   const previousImage = () => {
     setCurrentIndex(
@@ -31,7 +31,7 @@ const Features = () => {
     setSecCurrentIndex(
       (prevIndex) => (prevIndex - 1 + cardData.length) % cardData.length
     );
-    setTransitionClass('translate-x-full');
+    setTransitionclassName('translate-x-full');
   };
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cardData.length);
@@ -40,7 +40,7 @@ const Features = () => {
 
   return (
     <>
-      <section
+      <div
         className="text-justify bg-cover bg-center  pt-14 pb-14 text-[#fffff3]"
         style={{ backgroundImage: `url(${cardData[secCUrrentIndex].url})` }}
       >
@@ -93,7 +93,7 @@ const Features = () => {
                   <div
                     style={{
                       backgroundImage: `url(${cardData[currentIndex].url})`,
-                      transitionClass
+                      transitionclassName
                     }}
                     className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl  bg-center bg-cover transition-transform duration-500 transform translate-x-0 "
                     onClick={previousImage}
@@ -101,7 +101,7 @@ const Features = () => {
                   <div
                     style={{
                       backgroundImage: `url(${cardData[secCUrrentIndex].url})`,
-                      transitionClass
+                      transitionclassName
                     }}
                     className=" w-80 pr-7 h-full inline-block p-2 cursor-pointer rounded-2xl  bg-center bg-cover transition-transform duration-500 transform translate-x-0 "
                     onClick={nextImage}
@@ -112,7 +112,7 @@ const Features = () => {
           </div>
         </div>
 
-      </section>
+      </div>
     </>
   );
 };

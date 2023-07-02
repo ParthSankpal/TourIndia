@@ -50,14 +50,7 @@ const Navbar = () => {
     setFoodHover(true), setAdventure(false), setExplorehover(false);
   };
 
-  const [isShown, setIsShown] = useState(false);
-  const seeDoItems = () => {
-    setIsShown(!isShown);
-  };
-  const [hovered, setHovered] = useState(false);
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
+
   const [dropdownShow, setDropdownShow] = useState(false);
   const [seeDODrpdown, setSeeDODrpdown] = useState(false);
 
@@ -92,7 +85,8 @@ const Navbar = () => {
         <Route path="/see-do" element={<see-do />} />
         <Route path="/sdExplore" element={<sdDestination />} />
       </Routes>
-      <nav className="text-[#fff] w-full justify-between h-10  flex flex-nowrap   lg:px-11 sm: px-2 py-2 border-b border-b-[#e6ebf4]">
+      <div className="bg-[#fff] w-full z-50 fixed">
+      <nav className=" w-full justify-between h-10  flex    lg:px-11 sm: px-2 py-2 border-b border-b-[#e6ebf4]">
         <Link className=" hover:font-semibold ml-14 text-sm">Contact Us</Link>
         <button
           type="button"
@@ -105,7 +99,7 @@ const Navbar = () => {
           <img src={language} alt="glob" className="w-4" />
           <a
             href="#"
-            class="text-gray-700  hover:font-semibold  block pb-2 text-sm"
+            className="text-gray-700  hover:font-semibold  block pb-2 text-sm"
             role="menuitem"
             tabindex="-1"
             id="menu-item-1"
@@ -114,16 +108,16 @@ const Navbar = () => {
           </a>
           {dropdownShow && (
             <div
-              class="absolute right-18 z-10 border-[#374772] mt-2 w-24 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              className="absolute right-18 z-10 border-[#374772] mt-2 w-24 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="menu-button"
               tabindex="-1"
             >
-              <div class="py-1" role="none">
+              <div className="py-1" role="none">
                 <a
                   href="#"
-                  class="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm"
+                  className="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm"
                   role="menuitem"
                   tabindex="-1"
                   id="menu-item-1"
@@ -132,7 +126,7 @@ const Navbar = () => {
                 </a>
                 <a
                   href="#"
-                  class="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm"
+                  className="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm"
                   role="menuitem"
                   tabindex="-1"
                   id="menu-item-1"
@@ -141,7 +135,7 @@ const Navbar = () => {
                 </a>
                 <a
                   href="#"
-                  class="text-gray-700  hover:font-semibold block px-4 py-2 text-sm"
+                  className="text-gray-700  hover:font-semibold block px-4 py-2 text-sm"
                   role="menuitem"
                   tabindex="-1"
                   id="menu-item-2"
@@ -153,7 +147,7 @@ const Navbar = () => {
           )}
         </button>
       </nav>
-      <header className="text-[#fff]  w-full flex justify-between items-center  top-7  h-24 lg:px-32  sm: px-8 py-4 border-b border-b-[#e6ebf4]">
+      <header className=" w-full flex justify-between items-center  top-7  h-24 lg:px-32  sm: px-8 py-4 border-b border-b-[#e6ebf4]">
         <div className="flex  flex-nowrap align-middle gap-8">
           <div>
             <Link>
@@ -198,10 +192,10 @@ const Navbar = () => {
           </Link>
         </div>
       </header>
-      <section className="">
+      <div className="">
         {seeDODrpdown && (
           <div
-            class="absolute w-full  left-0 z-50  shadow-lg "
+            className="absolute w-full  left-0 z-50  shadow-lg "
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
@@ -491,7 +485,7 @@ const Navbar = () => {
 
         {planTripToggle && (
           <div
-            class="absolute w-full  left-0 z-50  shadow-lg "
+            className="absolute w-full  left-0 z-50  shadow-lg "
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
@@ -558,7 +552,7 @@ const Navbar = () => {
         )}
         {essentialToggle && (
           <div
-            class="absolute w-full  left-0 z-50  shadow-lg "
+            className="absolute w-full  left-0 z-50  shadow-lg "
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
@@ -659,7 +653,8 @@ const Navbar = () => {
             </div>
           </div>
         )}
-      </section>
+      </div>
+      </div>
     </>
   );
 };

@@ -70,13 +70,13 @@ const Footer = () => {
           </header>
           <button type='button' onClick={handleToggle} className='inline-flex  mr-10 w-24 justify-center gap-x-1.5 rounded-md bg-[#374772] px-3 py-1 text-sm  text-gray-900 ' id="menu-button" aria-expanded="true" aria-haspopup="true">
                 <img src={language} alt='glob' className='w-4 '/>
-                <a  class="text-gray-700  hover:font-semibold  block pb-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Eng</a>
+                <a  className="text-gray-700  hover:font-semibold  block pb-2 text-sm" role="menuitem" tabIndex="-1" id="menu-item-1">Eng</a>
                 {dropdownShow && 
-                <div class="absolute right-18 z-10 border-[#374772] mt-2 w-24 origin-top-right rounded-md bg-[#374772] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                    <div class="py-1" role="none">
-                        <a class="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Eng</a>
-                        <a class="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Hin</a>
-                        <a class="text-gray-700  hover:font-semibold block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Mar</a>
+                <div className="absolute right-18 z-10 border-[#374772] mt-2 w-24 origin-top-right rounded-md bg-[#374772] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
+                    <div className="py-1" role="none">
+                        <a className="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm" role="menuitem" tabIndex="-2" id="menu-item-1">Eng</a>
+                        <a className="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm" role="menuitem" tabIndex="-3" id="menu-item-1">Hin</a>
+                        <a className="text-gray-700  hover:font-semibold block px-4 py-2 text-sm" role="menuitem" tabIndex="-4" id="menu-item-2">Mar</a>
                         
                     </div>
                 </div>}

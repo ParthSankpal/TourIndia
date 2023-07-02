@@ -6,11 +6,11 @@ import seeDobg from '../assets/seeDobg.jpg';
 const SeeDo = () => {
 
   //NAVBAR COLOUR
-  const [colour, setcolour] = useState(false);
-  // changeColor=()=>{
-  //   (window.scrollY>=90) ? setcolour(true) : setcolour(false)
-  // }
-  window.addEventListener("scroll", (window.scrollY>=90) ? setcolour(true) : setcolour(false))
+  // const [colour, setcolour] = useState(false);
+  // // changeColor=()=>{
+  // //   (window.scrollY>=90) ? setcolour(true) : setcolour(false)
+  // // }
+  // window.addEventListener("scroll", (window.scrollY>=90) ? setcolour(true) : setcolour(false))
 
   return (
     <>
