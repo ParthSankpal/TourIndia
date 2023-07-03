@@ -21,7 +21,7 @@ const Main = () => {
     ]
   return (
     <>
-    <section className=''>
+    <div className=''>
     <header>
         <div className='mx-28 my-16 text-[#374772] justify-between flex'>
             <h2 className='font-El_Messiri text-4xl'>
@@ -79,7 +79,7 @@ const Main = () => {
             
         </div>
     </div>
-        <section className='m-24 h-56 bg-[#046a76] rounded-2xl flex'>
+        <div className='m-24 h-56 bg-[#046a76] rounded-2xl flex'>
             <div className='w-24  '>
                 <img src="" className='h-full rounded-l-2xl' alt='apttern' />
             </div>
@@ -98,9 +98,9 @@ const Main = () => {
                     </Link>
                 </div>
             </div>
-        </section>
+        </div>
 
-    </section>
+    </div>
     </>
   )
 }

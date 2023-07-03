@@ -24,6 +24,10 @@ const Header = () => {
       img: [TajMahal],
     },
   ]
+
+  const topImg=()=>{
+    setCurrentIndex(0);
+  }
   const [currentIndex, setCurrentIndex] = useState(0);
   const [secondTopIndex, setSecondTopIndex] = useState(1);
   const [thirdTop, setThirdTop] = useState(2);
@@ -42,7 +46,7 @@ const Header = () => {
   return (
     <>
     
-    <div className=' pt-32'>
+    <div className=' pt-36'>
     <div className='bg-cover  h-5/6 bg-center' style={{ backgroundImage: `url(${cardData[currentIndex].img})`, backgroundSize: '1920px 1920px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center',backdrop_filter:' blur(20px)'}}>
           <div className=' backdrop-blur-md '>
             <div className='flex h-5/6 text-justify text-[#374772] justify-between px-52 pt-44 pb-28 object-cove'>

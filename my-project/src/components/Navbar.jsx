@@ -26,7 +26,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { MdDialpad } from "react-icons/md";
 
 
-const Navbar = () => {
+const Navbar = ({ transparentMode }) => {
   const [cityDrop, setCityDrop] = useState(false);
   const cityDropToggle = () => {
     setCityDrop(!cityDrop);
@@ -79,14 +79,21 @@ const Navbar = () => {
     setDropdownShow(!dropdownShow);
   };
 
+
+  {/* NVABAR BACKGROUND  */}
+  const navbarClassName = transparentMode ?'bg-[#fff] transition-colors duration-500': 'bg-transparent transition-colors duration-300' ;
+
   return (
     <>
       <Routes>
         <Route path="/see-do" element={<see-do />} />
         <Route path="/sdExplore" element={<sdDestination />} />
       </Routes>
-      <div className="bg-[#fff] w-full z-50 fixed">
-      <nav className=" w-full justify-between h-10  flex    lg:px-11 sm: px-2 py-2 border-b border-b-[#e6ebf4]">
+
+      
+
+      <div className={`w-full z-50 fixed ${navbarClassName}`} >
+      <nav className=" w-full justify-between h-12 items-center flex lg:px-11 sm: px-2 py-2 border-b border-b-[#e6ebf4]" >
         <Link className=" hover:font-semibold ml-14 text-sm">Contact Us</Link>
         <button
           type="button"
