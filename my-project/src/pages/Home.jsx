@@ -9,12 +9,12 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
-      <Navbar transparentMode={false} />
+      <Navbar transparentMode={false} logoColourMode={true}/>
       <Header />
       <Main />
       <Features />
       <Explore />
-      <Footer />
+      <Footer colour={true}/>
     </>
   );
 };

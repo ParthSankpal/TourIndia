@@ -26,7 +26,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { MdDialpad } from "react-icons/md";
 
 
-const Navbar = ({ transparentMode }) => {
+const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
   const [cityDrop, setCityDrop] = useState(false);
   const cityDropToggle = () => {
     setCityDrop(!cityDrop);
@@ -81,20 +81,23 @@ const Navbar = ({ transparentMode }) => {
 
 
   {/* NVABAR BACKGROUND  */}
-  const navbarClassName = transparentMode ?'bg-[#fff] transition-colors duration-500': 'bg-transparent transition-colors duration-300' ;
+  const navbarClassName = transparentMode ? 'bg-transparent transition-colors duration-300': 'bg-[#fff] transition-colors duration-500' ;
+  
+  // NAVBAR TEXT COLOUR
+  const navbarTextColour = textColorMode? 'text-[#fffff3]':'text-[#374772]';
+
+  //LOGO COLOUR
+  const logoColour = logoColourMode? 'bg-[#374772]':'bg-[#78006e]' ;
 
   return (
     <>
-      <Routes>
-        <Route path="/see-do" element={<see-do />} />
-        <Route path="/sdExplore" element={<sdDestination />} />
-      </Routes>
+      
 
       
 
       <div className={`w-full z-50 fixed ${navbarClassName}`} >
       <nav className=" w-full justify-between h-12 items-center flex lg:px-11 sm: px-2 py-2 border-b border-b-[#e6ebf4]" >
-        <Link className=" hover:font-semibold ml-14 text-sm">Contact Us</Link>
+        <Link className={`hover:font-semibold ml-14 text-sm ${navbarTextColour}`}>Contact Us</Link>
         <button
           type="button"
           onClick={handleToggle}
@@ -157,32 +160,32 @@ const Navbar = ({ transparentMode }) => {
       <header className=" w-full flex justify-between items-center  top-7  h-24 lg:px-32  sm: px-8 py-4 border-b border-b-[#e6ebf4]">
         <div className="flex  flex-nowrap align-middle gap-8">
           <div>
-            <Link>
+            <Link to='/'>
               <img
                 src={logo}
                 alt="logo"
-                className="w-24 bg-[#374772] bg-cover object-contain"
+                className={`w-24 ${logoColour} bg-cover object-contain`}
               />
             </Link>
           </div>
           <button
             onClick={seeDoToggle}
-            className=" hover:font-semibold relative "
+            className={`hover:text-[#37477278] ${navbarTextColour} relative` }
           >
             See & Do
             {seeDODrpdown ? (
               <BsFillCaretUpFill className=" absolute  items-center left-7 -bottom-7 text-xl" />
             ) : null}
           </button>
-          <Link className=" hover:font-semibold" onClick={planTripToggle1}>
+          <Link className={`hover:text-[#37477278] ${navbarTextColour}`} onClick={planTripToggle1}>
             Plan Your Trip
           </Link>
-          <Link className=" hover:font-semibold" onClick={essentialToggle1}>
+          <Link className={`hover:text-[#37477278] ${navbarTextColour}`} onClick={essentialToggle1}>
             Travel Essentials
           </Link>
-          <Link className=" hover:font-semibold">India Calender</Link>
-          <Link className=" hover:font-semibold ">Experiences</Link>
-          <Link className=" hover:font-semibold">India Map</Link>
+          <Link className={`hover:text-[#37477278] ${navbarTextColour}`}>India Calender</Link>
+          <Link className={`hover:text-[#37477278] ${navbarTextColour}`}>Experiences</Link>
+          <Link className={`hover:text-[#37477278] ${navbarTextColour}`}>India Map</Link>
         </div>
         <div className="flex flex-nowrap align-middle gap-4">
           <Link className="font-inner w-6 pt-2 font-medium">
@@ -193,7 +196,7 @@ const Navbar = ({ transparentMode }) => {
           </Link>
           <Link
             to="/visaapplication"
-            className="text-[#fffff3] font-inner  font-medium bg-[#374772] text-white px-4 py-2 rounded-full"
+            className={`text-[#fffff3] font-inner ${logoColour}  font-medium  text-white px-4 py-2 rounded-full`}
           >
             Apply for eVisa
           </Link>
@@ -212,7 +215,7 @@ const Navbar = ({ transparentMode }) => {
               <div className="bg-[#43495b] text-md font-semibold text-[#fffff3] py-12  w-5/12 ">
                 <div className="flex flex-col text-justify   mx-52 gap-7">
                   <div>
-                    <div className="flex h-12 items-center gap-2 hover:translate-x-5 duration-1500">
+                    <div className="flex h-12 items-center gap-2 hover:translate-x-5 duration-500">
                       <Link
                         to="/see-do"
                         onMouseEnter={explorehover1}
@@ -223,20 +226,20 @@ const Navbar = ({ transparentMode }) => {
                     </div>
                   </div>
 
-                  <div className="flex h-12 items-center gap-2 hover:translate-x-5 duration-1500">
+                  <div className="flex h-12 items-center gap-2 hover:translate-x-5 duration-500">
                     <Link to="/sdDestination">Destinations</Link>
                   </div>
-                  <div className="flex h-12  items-center gap-2 hover:translate-x-5  duration-1500">
+                  <div className="flex h-12  items-center gap-2 hover:translate-x-5  duration-500">
                     <button onMouseEnter={adventure1} onMouseLeave={adventure1}>
                       Activities & Attractions
                     </button>
                   </div>
-                  <div className="flex h-12  items-center gap-2 hover:translate-x-5  duration-1500">
+                  <div className="flex h-12  items-center gap-2 hover:translate-x-5  duration-500">
                     <button onMouseEnter={foodHover1} onMouseOut={foodHover1}>
                       Food & Drink
                     </button>{" "}
                   </div>
-                  <div className="flex h-12  items-center gap-2 hover:translate-x-5  duration-1500">
+                  <div className="flex h-12  items-center gap-2 hover:translate-x-5  duration-500">
                     <button
                       onMouseEnter={explorehover1}
                       onMouseLeave={explorehover1}
