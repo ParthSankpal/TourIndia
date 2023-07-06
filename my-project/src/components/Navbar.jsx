@@ -80,6 +80,8 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
   };
 
 
+  
+
   {/* NVABAR BACKGROUND  */}
   const navbarClassName = transparentMode ? 'bg-transparent transition-colors duration-300': 'bg-[#fff] transition-colors duration-500' ;
   
@@ -109,7 +111,7 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
           <img src={language} alt="glob" className="w-4" />
           <a
             href="#"
-            className="text-gray-700  hover:font-semibold  block pb-2 text-sm"
+            className={`${navbarTextColour} text-gray-700  hover:font-semibold  block pb-2 text-sm`}
             role="menuitem"
             tabindex="-1"
             id="menu-item-1"
@@ -138,7 +140,7 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
                   href="#"
                   className="text-gray-700  hover:font-semibold border-[#374772] border-b-2 block px-4 py-2 text-sm"
                   role="menuitem"
-                  tabindex="-1"
+                  tabindex="-2"
                   id="menu-item-1"
                 >
                   Hin
@@ -147,7 +149,7 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
                   href="#"
                   className="text-gray-700  hover:font-semibold block px-4 py-2 text-sm"
                   role="menuitem"
-                  tabindex="-1"
+                  tabindex="-3"
                   id="menu-item-2"
                 >
                   Mar
