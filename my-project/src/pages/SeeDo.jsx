@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import seeDobg from "../assets/seeDobg.jpg";
+import promobanner from "../assets/promobanner.png";
 import activitiesattractions from "../assets/activitiesattractions.jpg";
 import indialandscapesone from "../assets/indialandscapesone.jpg";
 import Rajasthan from "../assets/Rajasthan.png";
@@ -28,14 +29,14 @@ const SeeDo = () => {
         className=" bg-center"
         style={{ backgroundImage: `url(${seeDobg})` }}
       >
-        <div className="justify-start text-6xl flex pt-64 px-32 pb-32 text-[#ffff]">
+        <div className="justify-start text-6xl flex pt-64 px-32 pb-44 text-[#ffff]">
           See & do
         </div>
       </header>
       <div className=" ">
         <div className="flex mx-32 mt-32 text-4xl ">What to do in India</div>
         <div className="mt-8  mx-32 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="rounded-2xl overflow-auto flex h-96 shadow-lg hover:shadow-2xl w-full">
+          <div className="rounded-2xl text-left overflow-auto flex h-96 shadow-lg hover:shadow-2xl w-full">
             <div className="w-1/2">
               <img
                 src={activitiesattractions}
@@ -71,25 +72,31 @@ const SeeDo = () => {
           </div>
         </div>
       </div>
-      <div className="m-24 h-56 bg-[#66005d] rounded-2xl flex">
-        <div className="w-24">
-          <img src="" className="h-full rounded-l-2xl" alt="apttern" />
-        </div>
-        <div className="w-full  justify-between  items-center text-justify  flex m-16 ">
-          <div className="text-[#fffff3]">
-            <div className=" ">Breathtaking landscape</div>
-            <div className=" text-2xl">Discover all destinations</div>
+      <div className="m-24  bg-[#66005d] hover:bg-[#66005d] duration-300 overflow-hidden relative rounded-2xl flex justify-between">
+          <div className="z-10  w-[85%]">
+            <div className="w-full  justify-between  items-center text-justify  flex m-24 ">
+              <div className="text-[#fffff3]">
+                <div className=" ">For Unique Travel Experience</div>
+                <div className=" text-2xl">Explore our Exclusive Offers</div>
+              </div>
+              <div className="">
+                <Link
+                  to="/visaapplication"
+                  className="text-[#66005d] bg-[#fff]  font-medium  text-white px-4 py-2 rounded-full"
+                >
+                  Check Now
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="">
-            <Link
-              to="/visaapplication"
-              className="text-[#046a76] bg-[#fff]  font-medium  text-white px-4 py-2 rounded-full"
-            >
-              Check Now
-            </Link>
+          <div className="w-1/2 h-full absolute left-[50%]">
+            <img
+              src={promobanner}
+              alt="img"
+              className="object-cover w-full h-full rounded-2xl"
+            />
           </div>
         </div>
-      </div>
 
       <div className="mx-32 ">
         <div className="flex text-4xl pb-10 ">
@@ -100,7 +107,7 @@ const SeeDo = () => {
             <video className="lg:w-1/2">
               <source src="" alt="Vdeio" />
             </video>
-            <div className="lg:w-1/2 h-full flex flex-col justify-start align-middle text-justify px-28 py-20">
+            <div className="lg:w-1/2 h-full flex flex-col justify-start align-middle text-left px-28 py-20">
               <div className="text-3xl pb-8">Food & drinks</div>
               <div>
                 Saudi Arabia’s culinary scene is diverse, delicious and booming.
@@ -149,7 +156,7 @@ const SeeDo = () => {
                 <img
                   src={indialandscapesone}
                   alt="landscape1"
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full rounded-lg h-full"
                 />
               </div>
               <div className="px-8 pt-8  w-1/2 flex flex-col text-left justify-between">
