@@ -13,7 +13,7 @@ const Home = () => {
       <Header />
       <Main  />
       <Features />
-      {/* <Explore /> */}
+      <Explore />
       <Footer colour={true}/>
     </>
   );

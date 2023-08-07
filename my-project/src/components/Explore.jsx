@@ -5,7 +5,7 @@ import Kerla from "../assets/Kerla.png";
 import TajMahal2 from "../assets/TajMahal2.png";
 import riversunset from "../assets/riversunset.png";
 import Mountains from "../assets/Mountains.png";
-import Tips from "../assets/Tips.png";
+import Tips from "../assets/tips.png";
 import About from "../assets/About.png";
 import Travel from "../assets/Travel.png";
 import Contact from "../assets/Contact.png";
@@ -84,11 +84,11 @@ const Explore = () => {
     
   ];
   return (
-    <section className="mt-32   overflow-hidden">
-      <header className=" text-3xl py-8 text-justify px-32  text-[#374772]">
+    <section className="   overflow-hidden">
+      {/* <header className=" text-3xl py-8 text-justify px-32  text-[#374772]">
         Explore Top Destinations
-      </header>
-      <main className="flex flex-col mx-18 justify-center ">
+      </header> */}
+      {/* <main className="flex flex-col mx-18 justify-center ">
         <div className="pt-8  h-96">Map</div>
         <div className="flex w-full  items-center px-32 justify-between">
           <button
@@ -128,7 +128,7 @@ const Explore = () => {
             <BsChevronRight />
           </button>
         </div>
-      </main>
+      </main> */}
       <footer className="p-32 text-3xl flex  ">
         <sectoin className="text-justify">
           <div className="  text-[#374772]">Know Before You Go</div>
