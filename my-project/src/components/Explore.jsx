@@ -5,7 +5,7 @@ import Kerla from "../assets/Kerla.png";
 import TajMahal2 from "../assets/TajMahal2.png";
 import riversunset from "../assets/riversunset.png";
 import Mountains from "../assets/Mountains.png";
-import Tips from "../assets/Tips.png";
+import Tips from "../assets/tips.png";
 import About from "../assets/About.png";
 import Travel from "../assets/Travel.png";
 import Contact from "../assets/Contact.png";
