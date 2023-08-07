@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import logo from "../../src/assets/logo.svg";
+import logo from "../../src/assets/logo.jpeg";
 import search from "../assets/search.png";
 import profile from "../assets/profile.png";
 import language from "../assets/language.svg";
@@ -83,7 +83,7 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
   
 
   {/* NVABAR BACKGROUND  */}
-  const navbarClassName = transparentMode ? 'bg-transparent transition-colors duration-300': 'bg-[#fff] transition-colors duration-500' ;
+  const navbarClassName = transparentMode ? 'bg-transparent transition-colors duration-300': 'bg-[#fffff3] transition-colors duration-500' ;
   
   // NAVBAR TEXT COLOUR
   const navbarTextColour = textColorMode? 'text-[#fffff3]':'text-[#374772]';
@@ -197,7 +197,7 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
             <img src={profile} alt="profile" />
           </Link>
           <Link
-            to="/visaapplication"
+            to=""
             className={`text-[#fffff3] font-inner ${logoColour}  font-medium  text-white px-4 py-2 rounded-full`}
           >
             Apply for eVisa
@@ -214,7 +214,7 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
             tabindex="-1"
           >
             <div className="flex justify-between " role="none">
-              <div className="bg-[#43495b] text-md font-semibold text-[#fffff3] py-12  w-5/12 ">
+              <div className="bg-[#78006e] text-md font-semibold text-[#fffff3] py-12  w-5/12 ">
                 <div className="flex flex-col text-justify   mx-52 gap-7">
                   <div>
                     <div className="flex h-12 items-center gap-2 hover:translate-x-5 duration-500">
@@ -253,19 +253,19 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
               </div>
               {/* SEE AND DO DROPDOWN */}
               {explorehover && (
-                <div className="py-10 transi bg-[#eee] w-7/12">
+                <div className="py-10 transi bg-[#eee] text-[#78006e] w-7/12">
                   <div className="grid grid-cols-2 gap-8  text-justify px-28 grid-rows-2">
                     <div className="border border-[#6362624b] rounded-md">
                       <div className="pt-7 pl-9 gap-3 align-middle pb-4 flex flex-col">
-                        <div className="text-xs text-[#fff] font-semibold">
+                        <div className="text-xs  font-semibold">
                           Show time
                         </div>
                         <div className="text-[#646464] font-bold  ">
                           Visit Isha Foundation
                         </div>
                       </div>
-                      <div className="pt-3 pb-4 mx-9 text-[#fff] border-t border-[#6362624b] justify-between flex  items-center  ">
-                        <div className="  text-md text-[#fff]">
+                      <div className="pt-3 pb-4 mx-9 text-[#78006e] border-t border-[#6362624b] justify-between flex  items-center  ">
+                        <div className="  text-md text-[#78006e]">
                           Learn More
                         </div>
                         <span>
@@ -275,15 +275,15 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
                     </div>
                     <div className="border border-[#6362624b] rounded-md">
                       <div className="pt-7 pl-9 gap-3 align-middle pb-4 flex flex-col">
-                        <div className="text-xs text-[#fff] font-semibold">
+                        <div className="text-xs text-[#78006e] font-semibold">
                           Explore{" "}
                         </div>
                         <div className="text-[#646464] font-bold mr-9   truncate">
                           Dive into Angels deep blue lake with swin skills
                         </div>
                       </div>
-                      <div className="pt-3 pb-4 mx-9 text-[#fff] border-t border-[#6362624b] justify-between flex  items-center  ">
-                        <div className="  text-md text-[#fff]">
+                      <div className="pt-3 pb-4 mx-9 text-[#78006e] border-t border-[#6362624b] justify-between flex  items-center  ">
+                        <div className="  text-md">
                           Learn More
                         </div>
                         <span>
@@ -292,7 +292,7 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
                       </div>
                     </div>
                     <div className=" col-span-2 border border-[#6362624b] rounded-md">
-                      <div className="text-xs text-[#fff] font-semibold flex flex-row gap-2 py-4 bg-[#f7f7f7] px-10">
+                      <div className="text-xs font-semibold flex flex-row gap-2 py-4 bg-[#f7f7f7] px-10">
                         <BsFillCloudSunFill />
                         Current weather
                       </div>
@@ -340,7 +340,7 @@ const Navbar = ({ transparentMode,textColorMode, logoColourMode}) => {
                           </div>
                           <div>34C</div>
                         </div>
-                        <div className="flex flex-col border-l text-[#43495b] items-end ml-8 w-full">
+                        <div className="flex flex-col border-l  items-end ml-8 w-full">
                           <div className="flex  gap-2 items-center text-sm">
                             <BsThermometerSun /> 42C
                           </div>

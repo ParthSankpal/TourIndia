@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../src/assets/logo.svg";
+import logo from "../../src/assets/logo.jpeg";
 import language from "../assets/language.svg";
 import Appstore from "../assets/appstore.png";
 import Playstore from "../assets/googleplay.png";
@@ -20,13 +20,13 @@ const Footer = ({colour}) => {
     setDropdownShow(!dropdownShow);
   };
 
-  const FooterColour= colour? 'bg-[#374772]': 'bg-[#78006e]';
+  const FooterColour= colour? 'bg-[#374772]': 'bg-[#374772]';
 
   
 
   return (
     <>
-      <section className="  pb-20">
+      <section className="pt-28  pb-20 bg-[#fffff2]">
         <div className="mx-24 text-[#374772]  justify-between flex  ">
           <div className="pr-9 w-80 border-r">
             <Link to="/">

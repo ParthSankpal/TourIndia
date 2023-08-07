@@ -84,7 +84,7 @@ const Explore = () => {
     
   ];
   return (
-    <section className="mt-32  overflow-hidden">
+    <section className="mt-32   overflow-hidden">
       <header className=" text-3xl py-8 text-justify px-32  text-[#374772]">
         Explore Top Destinations
       </header>

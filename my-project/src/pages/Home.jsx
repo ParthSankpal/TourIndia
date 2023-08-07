@@ -11,9 +11,9 @@ const Home = () => {
     <>
       <Navbar transparentMode={false} logoColourMode={true}/>
       <Header />
-      <Main />
+      <Main  />
       <Features />
-      <Explore />
+      {/* <Explore /> */}
       <Footer colour={true}/>
     </>
   );

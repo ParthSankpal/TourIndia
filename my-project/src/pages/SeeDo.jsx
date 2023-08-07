@@ -7,6 +7,7 @@ import promobanner from "../assets/promobanner.png";
 import activitiesattractions from "../assets/activitiesattractions.jpg";
 import indialandscapesone from "../assets/indialandscapesone.jpg";
 import Rajasthan from "../assets/Rajasthan.png";
+import food3 from '../assets/food2.jpg';
 
 import experiencestours from "../assets/experiencestours.jpg";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
@@ -33,7 +34,7 @@ const SeeDo = () => {
           See & do
         </div>
       </header>
-      <div className=" ">
+      <div className="">
         <div className="flex mx-32 mt-32 text-4xl ">What to do in India</div>
         <div className="mt-8  mx-32 grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="rounded-2xl text-left overflow-auto flex h-96 shadow-lg hover:shadow-2xl w-full">
@@ -104,19 +105,19 @@ const SeeDo = () => {
         </div>
         <div className="grid grid-cols-1 rounded-2xl shadow-lg hover:shadow-2xl">
           <div className="lg:flex">
-            <video className="lg:w-1/2">
-              <source src="" alt="Vdeio" />
-            </video>
+            <img className="lg:w-1/2 rounded-2xl" src={food3} alt="Vdeio">
+               
+            </img>
             <div className="lg:w-1/2 h-full flex flex-col justify-start align-middle text-left px-28 py-20">
               <div className="text-3xl pb-8">Food & drinks</div>
               <div>
-                Saudi Arabia’s culinary scene is diverse, delicious and booming.
+                Indias’s culinary scene is diverse, delicious and booming.
                 From delectable gourmet cuisine to fragrant Arabic dishes,
                 there’s something to suit every appetite and budget.
               </div>
               <div className=" py-8">
                 <Link
-                  to="/visaapplication"
+                  to=""
                   className="text-[#fffff3] bg-[#66005d]  font-medium  text-white px-4 py-2 rounded-full"
                 >
                   Explore

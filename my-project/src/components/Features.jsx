@@ -41,7 +41,7 @@ const Features = () => {
   return (
     <>
       <div
-        className="text-justify bg-cover bg-center  pt-14 pb-14 text-[#fffff3]"
+        className="text-justify bg-cover bg-center pt-14 pb-14 text-[#fffff3]"
         style={{ backgroundImage: `url(${cardData[secCUrrentIndex].url})` }}
       >
         <div className="overflow-hidden">
